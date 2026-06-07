@@ -1,4 +1,4 @@
-name: 🏀 Fetch FFBB Data
+# fetch_ffbb.py - Recupere les donnees EASJB depuis l'API FFBB
 
 on:
   schedule:
