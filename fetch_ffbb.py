@@ -1,6 +1,6 @@
 """
 fetch_ffbb.py - Fetch EASJB data from FFBB API
-Debug version - dumps raw API response structure
+Tests multiple search terms to find the club.
 """
 
 import json
@@ -9,12 +9,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 OUTPUT_PATH = Path(__file__).parent / "public" / "data.json"
-CLUB_SEARCH = "arthes saint juery"
+
+SEARCH_TERMS = [
+    "arthes",
+    "saint juery",
+    "EASJB",
+    "arth",
+    "juery",
+    "arthes basket",
+]
 
 
 def obj_to_dict(obj, depth=0):
-    """Recursively convert any object to a JSON-serializable dict."""
-    if depth > 5:
+    if depth > 4:
         return str(obj)
     if obj is None:
         return None
@@ -24,7 +31,6 @@ def obj_to_dict(obj, depth=0):
         return [obj_to_dict(i, depth+1) for i in obj]
     if isinstance(obj, dict):
         return {k: obj_to_dict(v, depth+1) for k, v in obj.items()}
-    # It's a custom object - get all its attributes
     result = {}
     for attr in dir(obj):
         if attr.startswith('_'):
@@ -37,27 +43,6 @@ def obj_to_dict(obj, depth=0):
         except Exception:
             pass
     return result
-
-
-def extract_list(obj):
-    """Try every possible way to get a list from a result object."""
-    if obj is None:
-        return []
-    if isinstance(obj, list):
-        return obj
-    for attr in ["hits", "results", "items", "data", "organismes",
-                 "rencontres", "competitions", "lives", "value"]:
-        val = getattr(obj, attr, None)
-        if val is not None:
-            if isinstance(val, list):
-                return val
-            inner = getattr(val, "hits", None)
-            if inner and isinstance(inner, list):
-                return inner
-    try:
-        return list(obj)
-    except Exception:
-        return []
 
 
 def main():
@@ -81,46 +66,39 @@ def main():
         print(f"Error: {e}")
         sys.exit(1)
 
-    # --- Search organismes and dump raw structure ---
-    print(f"Searching: {CLUB_SEARCH}")
-    try:
-        result = client.search_organismes(CLUB_SEARCH)
-        print(f"Result type: {type(result)}")
-        print(f"Result attrs: {[a for a in dir(result) if not a.startswith('_')]}")
+    # Try each search term for organismes
+    print("--- Testing organisme search terms ---")
+    hits = []
+    found_term = None
+    for term in SEARCH_TERMS:
+        try:
+            result = client.search_organismes(term)
+            h = result.hits if result.hits else []
+            print(f"  '{term}' -> {len(h)} hits")
+            if h and not hits:
+                hits = h
+                found_term = term
+                first = obj_to_dict(h[0])
+                print(f"  First hit: {json.dumps(first, default=str)[:300]}")
+        except Exception as e:
+            print(f"  '{term}' -> error: {e}")
 
-        hits = extract_list(result)
-        print(f"Hits count: {len(hits)}")
-
-        if hits:
-            first = hits[0]
-            print(f"First hit type: {type(first)}")
-            print(f"First hit attrs: {[a for a in dir(first) if not a.startswith('_')]}")
-            first_dict = obj_to_dict(first)
-            print(f"First hit data: {json.dumps(first_dict, default=str)[:500]}")
-    except Exception as e:
-        print(f"Error organismes: {e}")
-        hits = []
-
-    # --- Search rencontres and dump raw structure ---
-    print("Fetching rencontres...")
+    # Try each search term for rencontres
+    print("--- Testing rencontres search terms ---")
     rencontres_raw = []
-    try:
-        result2 = client.search_rencontres(CLUB_SEARCH)
-        print(f"Rencontres result type: {type(result2)}")
-        print(f"Rencontres result attrs: {[a for a in dir(result2) if not a.startswith('_')]}")
+    for term in SEARCH_TERMS:
+        try:
+            result = client.search_rencontres(term)
+            h = result.hits if result.hits else []
+            print(f"  '{term}' -> {len(h)} hits")
+            if h and not rencontres_raw:
+                rencontres_raw = h
+                first = obj_to_dict(h[0])
+                print(f"  First rencontre: {json.dumps(first, default=str)[:500]}")
+        except Exception as e:
+            print(f"  '{term}' -> error: {e}")
 
-        rencontres_raw = extract_list(result2)
-        print(f"Rencontres count: {len(rencontres_raw)}")
-
-        if rencontres_raw:
-            first_r = rencontres_raw[0]
-            print(f"First rencontre type: {type(first_r)}")
-            first_r_dict = obj_to_dict(first_r)
-            print(f"First rencontre data: {json.dumps(first_r_dict, default=str)[:1000]}")
-    except Exception as e:
-        print(f"Error rencontres: {e}")
-
-    # --- Build output with raw data for inspection ---
+    # Build output
     rencontres_out = []
     for r in rencontres_raw:
         try:
@@ -133,7 +111,8 @@ def main():
     if hits:
         d = obj_to_dict(hits[0])
         club_nom = str(d.get("nom") or d.get("name") or "EASJB")
-        club_id  = str(d.get("id") or d.get("_id") or d.get("code") or "")
+        club_id = str(d.get("id") or d.get("_id") or d.get("code") or "")
+        print(f"Club found: {club_nom} (id={club_id})")
 
     data = {
         "meta": {
@@ -157,7 +136,7 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2, default=str)
 
-    print(f"Written {len(rencontres_out)} rencontres to {OUTPUT_PATH}")
+    print(f"Written {len(rencontres_out)} rencontres.")
     print("Done.")
 
 
