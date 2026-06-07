@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "generated_at": "2026-06-07T15:21:47.807767+00:00",
+    "club_nom": "EASJB",
+    "club_id": "",
+    "source": "ffbb-api-client-v2"
+  },
+  "rencontres": [],
+  "prochain_match": null,
+  "dernier_resultat": null,
+  "lives": [],
+  "stats": {
+    "total": 0,
+    "joues": 0,
+    "a_venir": 0
+  }
+}
