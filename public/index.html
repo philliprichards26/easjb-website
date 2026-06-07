@@ -1,1 +1,871 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EASJB — Entente Arthès Saint-Juéry Basket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --orange: #F4600C;
+      --orange-dark: #c44d08;
+      --black: #0d0d0d;
+      --dark: #141414;
+      --mid: #1e1e1e;
+      --card: #1a1a1a;
+      --border: rgba(255,255,255,0.08);
+      --text: #e8e8e8;
+      --muted: #888;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--black);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+      height: 64px;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      color: var(--white);
+    }
+    .nav-logo span { color: var(--orange); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--orange); }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 3rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 75% 55%, rgba(244,96,12,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 20% 40%, rgba(244,96,12,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Big background number */
+    .hero-bg-number {
+      position: absolute;
+      right: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(18rem, 30vw, 36rem);
+      line-height: 1;
+      color: rgba(255,255,255,0.022);
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.2s forwards;
+    }
+
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 9vw, 9rem);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      text-transform: uppercase;
+      max-width: 900px;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.35s forwards;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+      -webkit-text-stroke: 0px;
+    }
+
+    .hero-sub {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.7;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.5s forwards;
+    }
+
+    .hero-cta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.65s forwards;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      border-radius: 3px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1.5px solid var(--border);
+      color: var(--text);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      border-radius: 3px;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+    .btn-ghost:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-2px); }
+
+    .hero-stats {
+      margin-top: 4rem;
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.8s forwards;
+    }
+
+    .stat-item { }
+    .stat-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: var(--white);
+      line-height: 1;
+    }
+    .stat-number span { color: var(--orange); }
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+
+    /* Divider line */
+    .hero-line {
+      position: absolute;
+      bottom: 0; left: 3rem; right: 3rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      padding: 6rem 3rem;
+      position: relative;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .section-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      color: var(--white);
+    }
+
+    /* ─── EQUIPES GRID ─── */
+    #equipes { background: var(--dark); }
+
+    .equipes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .equipe-card {
+      background: var(--card);
+      padding: 2rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .equipe-card:hover { background: var(--mid); }
+    .equipe-card:hover .equipe-arrow { transform: translateX(6px); color: var(--orange); }
+
+    .equipe-cat {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+
+    .equipe-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
+    }
+
+    .equipe-division {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.4;
+      margin-bottom: 1.2rem;
+    }
+
+    .equipe-arrow {
+      font-size: 1.2rem;
+      color: var(--muted);
+      transition: transform 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    /* ─── RESULTATS / WIDGETS ─── */
+    #resultats { background: var(--black); }
+
+    .widgets-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .widgets-layout { grid-template-columns: 1fr; }
+    }
+
+    .widget-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .widget-block-header {
+      padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .widget-block-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .widget-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--orange);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .widget-block iframe {
+      width: 100%;
+      border: none;
+      display: block;
+      background: transparent;
+    }
+
+    /* Widget placeholder (shown before real widget loads) */
+    .widget-placeholder {
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .widget-placeholder p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .widget-placeholder a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .widget-placeholder a:hover { text-decoration: underline; }
+
+    /* ─── LIVE SECTION ─── */
+    #live { background: var(--dark); }
+
+    .live-cta-box {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      background: linear-gradient(135deg, var(--card) 0%, rgba(244,96,12,0.05) 100%);
+    }
+
+    .live-cta-box h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .live-cta-box p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.6rem;
+      max-width: 420px;
+      line-height: 1.6;
+    }
+
+    /* ─── CLUB INFO ─── */
+    #club { background: var(--black); }
+
+    .club-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    @media (max-width: 800px) {
+      .club-grid { grid-template-columns: 1fr; }
+    }
+
+    .club-text p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .club-text p strong { color: var(--text); font-weight: 500; }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+    }
+
+    .info-row {
+      display: flex;
+      padding: 1rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .info-row:last-child { border-bottom: none; }
+
+    .info-key {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      min-width: 130px;
+    }
+
+    .info-val {
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: var(--white);
+    }
+    .footer-logo span { color: var(--orange); }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--orange); }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── SCORENCO NOTICE ─── */
+    .snc-notice {
+      background: rgba(244,96,12,0.08);
+      border: 1px solid rgba(244,96,12,0.25);
+      border-radius: 4px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .snc-notice strong { color: var(--orange); }
+    .snc-notice a { color: var(--orange); text-decoration: none; }
+    .snc-notice a:hover { text-decoration: underline; }
+
+    /* ─── MOBILE NAV ─── */
+    @media (max-width: 700px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { display: none; }
+      section { padding: 4rem 1.5rem; }
+      .hero { padding: 7rem 1.5rem 4rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+
+    /* Scoreboard stripe */
+    .scoreboard-stripe {
+      background: var(--orange);
+      padding: 0.6rem 3rem;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .stripe-inner {
+      display: inline-block;
+      animation: marquee 30s linear infinite;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">EAS<span>JB</span></div>
+    <ul class="nav-links">
+      <li><a href="#equipes">Équipes</a></li>
+      <li><a href="#resultats">Résultats</a></li>
+      <li><a href="#live">Live</a></li>
+      <li><a href="#club">Le Club</a></li>
+    </ul>
+  </nav>
+
+  <!-- SCROLLING STRIPE -->
+  <div class="scoreboard-stripe" style="margin-top:64px;">
+    <span class="stripe-inner">
+      🏀 EASJB — Entente Arthès Saint-Juéry Basket &nbsp;•&nbsp; Tarn (81) &nbsp;•&nbsp; +80 licenciés &nbsp;•&nbsp; 7 équipes &nbsp;•&nbsp; U11 · U13 · U15 · U17 · U18 · Seniors &nbsp;•&nbsp; Club 100% bénévoles &nbsp;•&nbsp; Passion · Famille · Basket &nbsp;•&nbsp;
+      🏀 EASJB — Entente Arthès Saint-Juéry Basket &nbsp;•&nbsp; Tarn (81) &nbsp;•&nbsp; +80 licenciés &nbsp;•&nbsp; 7 équipes &nbsp;•&nbsp; U11 · U13 · U15 · U17 · U18 · Seniors &nbsp;•&nbsp; Club 100% bénévoles &nbsp;•&nbsp; Passion · Famille · Basket &nbsp;•&nbsp;
+    </span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg-number">81</div>
+    <div class="hero-tag">🏀 Tarn · Arthès &amp; Saint-Juéry</div>
+    <h1>Entente<br><em>Arthès</em><br>Saint-Juéry<br>Basket</h1>
+    <p class="hero-sub">Le club familial du Tarn, géré entièrement par des bénévoles passionnés. Du U11 aux Seniors, rejoignez l'aventure EASJB.</p>
+    <div class="hero-cta">
+      <a href="#resultats" class="btn-primary">Résultats &amp; Calendrier →</a>
+      <a href="#club" class="btn-ghost">Découvrir le club</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">80<span>+</span></div>
+        <div class="stat-label">Licenciés</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">7</div>
+        <div class="stat-label">Équipes</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">40<span>+</span></div>
+        <div class="stat-label">Ans d'existence</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100<span>%</span></div>
+        <div class="stat-label">Bénévoles</div>
+      </div>
+    </div>
+    <div class="hero-line"></div>
+  </section>
+
+  <!-- EQUIPES -->
+  <section id="equipes">
+    <div class="section-header">
+      <div class="section-tag">Nos formations</div>
+      <h2 class="section-title">Les Équipes</h2>
+    </div>
+    <div class="equipes-grid">
+
+      <a class="equipe-card" href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/1-cb1u" target="_blank">
+        <div class="equipe-cat">Seniors</div>
+        <div class="equipe-name">Senior M1</div>
+        <div class="equipe-division">Départementale Masculine Seniors — Division 2</div>
+        <span class="equipe-arrow">→</span>
+      </a>
+
+      <a class="equipe-card" href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/2-vmym" target="_blank">
+        <div class="equipe-cat">Seniors</div>
+        <div class="equipe-name">Senior M2</div>
+        <div class="equipe-division">Départementale Masculine Seniors — Division 2</div>
+        <span class="equipe-arrow">→</span>
+      </a>
+
+      <a class="equipe-card" href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/u18-1-ccbp" target="_blank">
+        <div class="equipe-cat">Jeunes</div>
+        <div class="equipe-name">U18 M1</div>
+        <div class="equipe-division">Départementale Masculine U18</div>
+        <span class="equipe-arrow">→</span>
+      </a>
+
+      <a class="equipe-card" href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/u15-1-3hh1" target="_blank">
+        <div class="equipe-cat">Jeunes</div>
+        <div class="equipe-name">U15 M1</div>
+        <div class="equipe-division">Inter-Départementale Masculine U15 — Division 2</div>
+        <span class="equipe-arrow">→</span>
+      </a>
+
+      <a class="equipe-card" href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/u15-f1-4bry" target="_blank">
+        <div class="equipe-cat">Féminines</div>
+        <div class="equipe-name">U15 F1</div>
+        <div class="equipe-division">Inter-Départementale Féminine U15 — Division 2</div>
+        <span class="equipe-arrow">→</span>
+      </a>
+
+      <a class="equipe-card" href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/1-u13-3hgw" target="_blank">
+        <div class="equipe-cat">Jeunes</div>
+        <div class="equipe-name">U13 M1</div>
+        <div class="equipe-division">Départementale Masculine U13</div>
+        <span class="equipe-arrow">→</span>
+      </a>
+
+      <a class="equipe-card" href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/1-u11-b8en" target="_blank">
+        <div class="equipe-cat">Jeunes</div>
+        <div class="equipe-name">U11 M1</div>
+        <div class="equipe-division">Départementale Mixte U11</div>
+        <span class="equipe-arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- RÉSULTATS & WIDGETS SCORENCO -->
+  <section id="resultats">
+    <div class="section-header">
+      <div class="section-tag">Score'n'co × FFBB</div>
+      <h2 class="section-title">Résultats &amp; Calendrier</h2>
+    </div>
+
+    <div class="snc-notice">
+      <strong>ℹ️ Intégration Score'n'co</strong> — Ces widgets sont alimentés directement par la FFBB via Score'n'co.
+      Pour activer les widgets personnalisés sur un vrai site, le responsable du club doit créer ses widgets depuis
+      <a href="https://app.scorenco.com" target="_blank">app.scorenco.com</a> (gratuit) et copier le code iframe fourni.
+      Les liens ci-dessous pointent directement vers la page du club EASJB sur Score'n'co.
+    </div>
+
+    <div class="widgets-layout">
+
+      <!-- Widget 1 — Tous les matchs -->
+      <div class="widget-block">
+        <div class="widget-block-header">
+          <span class="widget-block-title">🏀 Tous les matchs du club</span>
+          <div class="widget-dot"></div>
+        </div>
+        <!-- Iframe vers la page club Score'n'co (embed direct) -->
+        <iframe
+          src="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11"
+          height="540"
+          scrolling="yes"
+          title="Matchs EASJB"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <!-- Widget 2 — Senior M1 -->
+      <div class="widget-block">
+        <div class="widget-block-header">
+          <span class="widget-block-title">🔵 Senior M1 — Calendrier</span>
+          <div class="widget-dot"></div>
+        </div>
+        <iframe
+          src="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/1-cb1u"
+          height="540"
+          scrolling="yes"
+          title="Senior M1 EASJB"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <!-- Widget 3 — U15 M1 -->
+      <div class="widget-block">
+        <div class="widget-block-header">
+          <span class="widget-block-title">🟠 U15 M1 — Résultats</span>
+          <div class="widget-dot"></div>
+        </div>
+        <iframe
+          src="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/u15-1-3hh1"
+          height="540"
+          scrolling="yes"
+          title="U15 M1 EASJB"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <!-- Widget 4 — U15 F1 -->
+      <div class="widget-block">
+        <div class="widget-block-header">
+          <span class="widget-block-title">🩷 U15 F1 — Résultats</span>
+          <div class="widget-dot"></div>
+        </div>
+        <iframe
+          src="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11/u15-f1-4bry"
+          height="540"
+          scrolling="yes"
+          title="U15 F1 EASJB"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+    </div>
+
+    <div style="margin-top:2rem; text-align:center;">
+      <a href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11" target="_blank" class="btn-ghost">
+        Voir toutes les équipes sur Score'n'co →
+      </a>
+    </div>
+  </section>
+
+  <!-- LIVE -->
+  <section id="live">
+    <div class="section-header">
+      <div class="section-tag">En temps réel</div>
+      <h2 class="section-title">Suivez les matchs en direct</h2>
+    </div>
+    <div class="live-cta-box">
+      <div>
+        <h3>Live commenté<br>match par match</h3>
+        <p>Score'n'co permet à nos commentateurs bénévoles de livrer les actions en temps réel. Restez connectés pendant les matchs depuis n'importe où.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <a href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11" target="_blank" class="btn-primary">
+          Suivre le club →
+        </a>
+        <a href="https://scorenco.com/app" target="_blank" class="btn-ghost">
+          Application Score'n'co
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLUB -->
+  <section id="club">
+    <div class="section-header">
+      <div class="section-tag">Depuis plus de 40 ans</div>
+      <h2 class="section-title">Notre Club</h2>
+    </div>
+    <div class="club-grid">
+      <div class="club-text">
+        <p>
+          <strong>L'Entente Arthès Saint-Juéry Basket (EASJB)</strong> est un club familial du Tarn créé il y a plus de 40 ans.
+          Il rassemble aujourd'hui plus de <strong>80 licenciés</strong>, des plus jeunes (U11) jusqu'aux seniors.
+        </p>
+        <p>
+          Le club est entièrement géré par des bénévoles passionnés, qui s'investissent chaque semaine pour faire vivre le basket dans nos deux communes. Entraîneurs, dirigeants, parents : tout le monde contribue.
+        </p>
+        <p>
+          Nos équipes évoluent dans les championnats départementaux et inter-départementaux de la Ligue Tarn/Quercy-Garonneball, sous l'égide de la FFBB.
+        </p>
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="http://www.easjb.canalblog.fr" target="_blank" class="btn-ghost">Site officiel</a>
+          <a href="https://www.facebook.com/profile.php?id=100009343095828" target="_blank" class="btn-ghost">Facebook</a>
+          <a href="https://www.instagram.com/basket_arthes81" target="_blank" class="btn-ghost">Instagram</a>
+        </div>
+      </div>
+      <div>
+        <div class="info-list">
+          <div class="info-row">
+            <span class="info-key">Club</span>
+            <span class="info-val">Entente Arthès Saint-Juéry Basket</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Abréviation</span>
+            <span class="info-val">EASJB</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Département</span>
+            <span class="info-val">Tarn (81)</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Communes</span>
+            <span class="info-val">Arthès &amp; Saint-Juéry</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Licenciés</span>
+            <span class="info-val">80+ licenciés</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Équipes</span>
+            <span class="info-val">7 équipes (U11 → Seniors)</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Ligue</span>
+            <span class="info-val">Tarn / Quercy-Garonneball</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Fédération</span>
+            <span class="info-val">FFBB</span>
+          </div>
+          <div class="info-row">
+            <span class="info-key">Stats live</span>
+            <span class="info-val">Score'n'co</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">EAS<span>JB</span></div>
+    <div class="footer-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#equipes">Équipes</a>
+      <a href="#resultats">Résultats</a>
+      <a href="#club">Club</a>
+      <a href="https://scorenco.com/basket/clubs/ent-arthes-st-juery-bb-2q11" target="_blank">Score'n'co</a>
+      <a href="https://www.ffbb.com" target="_blank">FFBB</a>
+    </div>
+    <div class="footer-copy">© 2026 EASJB — Démo</div>
+  </footer>
+
+</body>
+</html>
 
