@@ -16,8 +16,8 @@ from pathlib import Path
 # 1. Import du client FFBB
 # ---------------------------------------------------------------------------
 try:
-    from ffbb_api_client_v2 import FFBBAPIClientV2
-    from ffbb_api_client_v2.clients.token_manager import TokenManager
+from ffbb_api_client_v2 import FFBBAPIClientV2
+from ffbb_api_client_v2 import TokenManager
 except ImportError:
     print("  ffbb-api-client-v2 non install. Lance : pip install ffbb-api-client-v2")
     sys.exit(1)
