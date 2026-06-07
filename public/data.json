@@ -1,16 +1,2019 @@
 {
   "meta": {
-    "generated_at": "2026-06-07T15:21:47.807767+00:00",
-    "club_nom": "EASJB",
-    "club_id": "",
+    "generated_at": "2026-06-07T20:35:58.615702+00:00",
+    "club_nom": "ENT. ARTHES ST JUERY BB",
+    "club_id": "12493",
     "source": "ffbb-api-client-v2"
   },
-  "rencontres": [],
+  "rencontres": [
+    {
+      "competition_id": {
+        "categorie": {
+          "code": "U15",
+          "libelle": "U15",
+          "ordre": 5
+        },
+        "code": "DFU15-P3-P4",
+        "competition_origine": {
+          "categorie": {
+            "ordre": 5
+          },
+          "code": "DFU15",
+          "id": "200000002874257",
+          "nom": "Départementale féminine U15",
+          "type_competition": {
+            "name": "DIV",
+            "value": "DIV"
+          },
+          "type_competition_generique": {
+            "logo": {
+              "id": "9d89f3b3-5b37-4cb5-8530-2cd11193502d"
+            }
+          }
+        },
+        "competition_origine_nom": "Départementale féminine U15",
+        "creation_en_cours": null,
+        "id": "200000002894653",
+        "live_stat": false,
+        "logo": null,
+        "nom": "Départementale féminine U15 - Phase 3 - Phase 4",
+        "nom_extended": "200000002874257|Départementale féminine U15|9d89f3b3-5b37-4cb5-8530-2cd11193502d|DIV|Féminin|5|PAS-DE-CALAIS|0062|Départemental|4",
+        "pro": false,
+        "publication_internet": null,
+        "sexe": "Féminin",
+        "type_competition": {
+          "name": "CHAMPIONNAT",
+          "value": "Championnat"
+        },
+        "type_competition_generique": {
+          "logo": {
+            "gradient_color": "#EB6D88",
+            "id": {
+              "bytes": "b'\\x9d\\x89\\xf3\\xb3[7L\\xb5\\x850,\\xd1\\x11\\x93P-'",
+              "bytes_le": "b'\\xb3\\xf3\\x89\\x9d7[\\xb5L\\x850,\\xd1\\x11\\x93P-'",
+              "clock_seq": "1328",
+              "clock_seq_hi_variant": "133",
+              "clock_seq_low": "48",
+              "fields": "(2643063731, 23351, 19637, 133, 48, 49276454653997)",
+              "hex": "9d89f3b35b374cb585302cd11193502d",
+              "int": "209405082843455829902367636262957043757",
+              "is_safe": "SafeUUID.unknown",
+              "node": "49276454653997",
+              "time": "915738393664156595",
+              "time_hi_version": "19637",
+              "time_low": "2643063731",
+              "time_mid": "23351",
+              "urn": "urn:uuid:9d89f3b3-5b37-4cb5-8530-2cd11193502d",
+              "variant": "specified in RFC 4122",
+              "version": "4"
+            }
+          }
+        }
+      },
+      "competition_orgine": null,
+      "competition_origine": null,
+      "creation_timestamp": 1778830825000,
+      "date": {
+        "day": 6,
+        "fold": 0,
+        "hour": 0,
+        "max": {
+          "day": 31,
+          "fold": 0,
+          "hour": 23,
+          "max": {
+            "day": 31,
+            "fold": 0,
+            "hour": 23,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 999999,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 59,
+            "month": 12,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 59,
+            "tzinfo": null,
+            "year": 9999
+          },
+          "microsecond": 999999,
+          "min": {
+            "day": 1,
+            "fold": 0,
+            "hour": 0,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 0,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 0,
+            "month": 1,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 0,
+            "tzinfo": null,
+            "year": 1
+          },
+          "minute": 59,
+          "month": 12,
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "second": 59,
+          "tzinfo": null,
+          "year": 9999
+        },
+        "microsecond": 0,
+        "min": {
+          "day": 1,
+          "fold": 0,
+          "hour": 0,
+          "max": {
+            "day": 31,
+            "fold": 0,
+            "hour": 23,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 999999,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 59,
+            "month": 12,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 59,
+            "tzinfo": null,
+            "year": 9999
+          },
+          "microsecond": 0,
+          "min": {
+            "day": 1,
+            "fold": 0,
+            "hour": 0,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 0,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 0,
+            "month": 1,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 0,
+            "tzinfo": null,
+            "year": 1
+          },
+          "minute": 0,
+          "month": 1,
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "second": 0,
+          "tzinfo": null,
+          "year": 1
+        },
+        "minute": 0,
+        "month": 6,
+        "resolution": {
+          "days": 0,
+          "max": {
+            "days": 999999999,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 999999,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 86399
+          },
+          "microseconds": 1,
+          "min": {
+            "days": -999999999,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 0,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "seconds": 0
+        },
+        "second": 0,
+        "tzinfo": null,
+        "year": 2026
+      },
+      "date_rencontre": {
+        "day": 6,
+        "fold": 0,
+        "hour": 17,
+        "max": {
+          "day": 31,
+          "fold": 0,
+          "hour": 23,
+          "max": {
+            "day": 31,
+            "fold": 0,
+            "hour": 23,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 999999,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 59,
+            "month": 12,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 59,
+            "tzinfo": null,
+            "year": 9999
+          },
+          "microsecond": 999999,
+          "min": {
+            "day": 1,
+            "fold": 0,
+            "hour": 0,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 0,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 0,
+            "month": 1,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 0,
+            "tzinfo": null,
+            "year": 1
+          },
+          "minute": 59,
+          "month": 12,
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "second": 59,
+          "tzinfo": null,
+          "year": 9999
+        },
+        "microsecond": 0,
+        "min": {
+          "day": 1,
+          "fold": 0,
+          "hour": 0,
+          "max": {
+            "day": 31,
+            "fold": 0,
+            "hour": 23,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 999999,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 59,
+            "month": 12,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 59,
+            "tzinfo": null,
+            "year": 9999
+          },
+          "microsecond": 0,
+          "min": {
+            "day": 1,
+            "fold": 0,
+            "hour": 0,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 0,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 0,
+            "month": 1,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 0,
+            "tzinfo": null,
+            "year": 1
+          },
+          "minute": 0,
+          "month": 1,
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "second": 0,
+          "tzinfo": null,
+          "year": 1
+        },
+        "minute": 0,
+        "month": 6,
+        "resolution": {
+          "days": 0,
+          "max": {
+            "days": 999999999,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 999999,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 86399
+          },
+          "microseconds": 1,
+          "min": {
+            "days": -999999999,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 0,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "seconds": 0
+        },
+        "second": 0,
+        "tzinfo": null,
+        "year": 2026
+      },
+      "date_rencontre_timestamp": 1780758000000,
+      "date_saisie_resultat_timestamp": 1780763838000,
+      "date_timestamp": 1780696800000,
+      "geo": {
+        "lat": 50.40638,
+        "lng": 2.84394
+      },
+      "gs_id": null,
+      "handicap1": null,
+      "handicap2": null,
+      "horaire": null,
+      "id": "200000014545253",
+      "id_engagement_equipe1": {
+        "id": "200000005323123",
+        "logo": null,
+        "nom_usuel": ""
+      },
+      "id_engagement_equipe2": {
+        "id": "200000005323124",
+        "logo": null,
+        "nom_usuel": ""
+      },
+      "id_organisme_equipe1": {
+        "code": "HDF0062039",
+        "id": "10425",
+        "logo": null,
+        "nom": "CLUB SPORTIF AVIONNAIS",
+        "nom_club_pro": "",
+        "nom_simple": null
+      },
+      "id_organisme_equipe2": {
+        "code": "HDF0062088",
+        "id": "200000002678248",
+        "logo": {
+          "gradient_color": "#4b4b4c",
+          "id": {
+            "bytes": {},
+            "bytes_le": {},
+            "clock_seq": 3468,
+            "clock_seq_hi_variant": 141,
+            "clock_seq_low": 140,
+            "fields": {},
+            "hex": "944ff1db4dac4d448d8ccbdb3d38a991",
+            "int": 197140840263712517132894274288545737105,
+            "is_safe": {
+              "name": "unknown",
+              "value": "None"
+            },
+            "node": 224142485399953,
+            "time": 955974424527368667,
+            "time_hi_version": 19780,
+            "time_low": 2488267227,
+            "time_mid": 19884,
+            "urn": "urn:uuid:944ff1db-4dac-4d44-8d8c-cbdb3d38a991",
+            "variant": "specified in RFC 4122",
+            "version": 4
+          }
+        },
+        "nom": "BASKET AMBLETEUSE MARQUISE",
+        "nom_club_pro": "",
+        "nom_simple": null
+      },
+      "id_poule": {
+        "id": "200000003051757",
+        "nom": "EXCELLENCE POULE A contre C"
+      },
+      "joue": true,
+      "logo": null,
+      "lower_gs_id": null,
+      "lower_id": "200000014545253",
+      "lower_nom_equipe1": "club sportif avionnais",
+      "lower_nom_equipe2": "basket ambleteuse marquise - 2",
+      "lower_officiels": [
+        "carlier ethan"
+      ],
+      "modification_timestamp": 1780823092000,
+      "niveau": {
+        "name": "DÉPARTEMENTAL",
+        "value": "Départemental"
+      },
+      "niveau_nb": 4,
+      "nom_equipe1": "CLUB SPORTIF AVIONNAIS",
+      "nom_equipe2": "BASKET AMBLETEUSE MARQUISE - 2",
+      "nom_extended": null,
+      "numero_journee": 1,
+      "officiels": [
+        {
+          "ordre": 1,
+          "fonction": {
+            "libelle": "Arbitre"
+          },
+          "officiel": {
+            "nom": "CARLIER",
+            "prenom": "Ethan"
+          }
+        }
+      ],
+      "officiels_string": "CARLIER Ethan",
+      "organisateur": {
+        "adresse": null,
+        "adresse_club_pro": null,
+        "cartographie": null,
+        "code": "0062",
+        "commune": null,
+        "commune_club_pro": null,
+        "competitions": null,
+        "date_affiliation": null,
+        "date_created": null,
+        "date_updated": null,
+        "engagements": null,
+        "entreprise": null,
+        "handibasket": null,
+        "hors_association": null,
+        "id": "2087",
+        "labellisation": null,
+        "logo": null,
+        "logo_base64": null,
+        "mail": null,
+        "membres": null,
+        "nom": "COMITE DU PAS-DE-CALAIS  DE BASKET-BALL",
+        "nom_club_pro": null,
+        "nom_simple": null,
+        "offres_pratiques": null,
+        "omnisport": null,
+        "organisme_id_pere": {
+          "adresse": null,
+          "adresse_club_pro": null,
+          "cartographie": null,
+          "code": "HDF",
+          "commune": null,
+          "commune_club_pro": null,
+          "date_affiliation": null,
+          "date_created": null,
+          "date_updated": null,
+          "engagements": null,
+          "entreprise": null,
+          "handibasket": null,
+          "hors_association": null,
+          "id": null,
+          "labellisation": null,
+          "logo": null,
+          "mail": null,
+          "nom": null,
+          "nom_club_pro": null,
+          "nom_simple": null,
+          "offres_pratiques": null,
+          "omnisport": null,
+          "organisme_id_pere": null,
+          "saison_en_cours": null,
+          "salle": null,
+          "telephone": null,
+          "type": null,
+          "type_association": null,
+          "url_site_web": null
+        },
+        "organismes_fils": null,
+        "saison_en_cours": null,
+        "salle": null,
+        "telephone": null,
+        "type": "C",
+        "type_association": null,
+        "url_site_web": null
+      },
+      "pratique": {
+        "name": "THE_5_X5",
+        "value": "5x5"
+      },
+      "pro": null,
+      "resultat_equipe1": "43",
+      "resultat_equipe2": "49",
+      "saison": {
+        "code": "25-26"
+      },
+      "salle": {
+        "adresse": "Rue Arthur Lamendin",
+        "adresse_complement": "BP 59",
+        "cartographie": {
+          "adresse": null,
+          "cartographie_id": null,
+          "code_postal": "62210",
+          "coordonnees": {
+            "coordinates": [
+              "2.84394",
+              "50.40638"
+            ],
+            "type": "Point"
+          },
+          "date_created": null,
+          "date_updated": null,
+          "latitude": null,
+          "longitude": null,
+          "status": null,
+          "title": null,
+          "ville": "Avion"
+        },
+        "commune": null,
+        "id": "62001000136",
+        "libelle": "SALLE MARCEL JORION",
+        "libelle2": null,
+        "lower_adresse": "rue arthur lamendin",
+        "lower_adresse_complement": "bp 59",
+        "lower_libelle": "salle marcel jorion",
+        "numero": null
+      },
+      "sexe": null,
+      "thumbnail": null,
+      "type_competition_generique": null,
+      "unique_key": "200000003051757_1_9034",
+      "url_competition": "/ligues/hdf/comites/0062/competitions/dfu15/match/200000014545253"
+    },
+    {
+      "competition_id": {
+        "categorie": {
+          "code": "SE",
+          "libelle": "Seniors",
+          "ordre": 10
+        },
+        "code": "PFA",
+        "competition_origine": {
+          "categorie": {
+            "ordre": -1
+          },
+          "code": "DF2",
+          "id": "200000002873076",
+          "nom": "Départementale féminine seniors - Division 2",
+          "type_competition": {
+            "name": "DIV",
+            "value": "DIV"
+          },
+          "type_competition_generique": {
+            "logo": {
+              "id": "dfcce9ee-8df7-43c9-b821-b90943b64cad"
+            }
+          }
+        },
+        "competition_origine_nom": "Départementale féminine seniors - Division 2",
+        "creation_en_cours": null,
+        "id": "200000002894939",
+        "live_stat": false,
+        "logo": null,
+        "nom": "PHASE FINALE ALLER",
+        "nom_extended": "200000002873076|Départementale féminine seniors - Division 2|dfcce9ee-8df7-43c9-b821-b90943b64cad|DIV|Féminin|-1|PAS-DE-CALAIS|0062|Départemental|4",
+        "pro": false,
+        "publication_internet": null,
+        "sexe": "Féminin",
+        "type_competition": {
+          "name": "COUPE",
+          "value": "Coupe"
+        },
+        "type_competition_generique": null
+      },
+      "competition_orgine": null,
+      "competition_origine": null,
+      "creation_timestamp": 1779269459000,
+      "date": {
+        "day": 30,
+        "fold": 0,
+        "hour": 0,
+        "max": {
+          "day": 31,
+          "fold": 0,
+          "hour": 23,
+          "max": {
+            "day": 31,
+            "fold": 0,
+            "hour": 23,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 999999,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 59,
+            "month": 12,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 59,
+            "tzinfo": null,
+            "year": 9999
+          },
+          "microsecond": 999999,
+          "min": {
+            "day": 1,
+            "fold": 0,
+            "hour": 0,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 0,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 0,
+            "month": 1,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 0,
+            "tzinfo": null,
+            "year": 1
+          },
+          "minute": 59,
+          "month": 12,
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "second": 59,
+          "tzinfo": null,
+          "year": 9999
+        },
+        "microsecond": 0,
+        "min": {
+          "day": 1,
+          "fold": 0,
+          "hour": 0,
+          "max": {
+            "day": 31,
+            "fold": 0,
+            "hour": 23,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 999999,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 59,
+            "month": 12,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 59,
+            "tzinfo": null,
+            "year": 9999
+          },
+          "microsecond": 0,
+          "min": {
+            "day": 1,
+            "fold": 0,
+            "hour": 0,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 0,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 0,
+            "month": 1,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 0,
+            "tzinfo": null,
+            "year": 1
+          },
+          "minute": 0,
+          "month": 1,
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "second": 0,
+          "tzinfo": null,
+          "year": 1
+        },
+        "minute": 0,
+        "month": 5,
+        "resolution": {
+          "days": 0,
+          "max": {
+            "days": 999999999,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 999999,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 86399
+          },
+          "microseconds": 1,
+          "min": {
+            "days": -999999999,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 0,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "seconds": 0
+        },
+        "second": 0,
+        "tzinfo": null,
+        "year": 2026
+      },
+      "date_rencontre": {
+        "day": 30,
+        "fold": 0,
+        "hour": 20,
+        "max": {
+          "day": 31,
+          "fold": 0,
+          "hour": 23,
+          "max": {
+            "day": 31,
+            "fold": 0,
+            "hour": 23,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 999999,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 59,
+            "month": 12,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 59,
+            "tzinfo": null,
+            "year": 9999
+          },
+          "microsecond": 999999,
+          "min": {
+            "day": 1,
+            "fold": 0,
+            "hour": 0,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 0,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 0,
+            "month": 1,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 0,
+            "tzinfo": null,
+            "year": 1
+          },
+          "minute": 59,
+          "month": 12,
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "second": 59,
+          "tzinfo": null,
+          "year": 9999
+        },
+        "microsecond": 0,
+        "min": {
+          "day": 1,
+          "fold": 0,
+          "hour": 0,
+          "max": {
+            "day": 31,
+            "fold": 0,
+            "hour": 23,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 999999,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 59,
+            "month": 12,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 59,
+            "tzinfo": null,
+            "year": 9999
+          },
+          "microsecond": 0,
+          "min": {
+            "day": 1,
+            "fold": 0,
+            "hour": 0,
+            "max": {
+              "day": "31",
+              "fold": "0",
+              "hour": "23",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "999999",
+              "min": "0001-01-01 00:00:00",
+              "minute": "59",
+              "month": "12",
+              "resolution": "0:00:00.000001",
+              "second": "59",
+              "tzinfo": "None",
+              "year": "9999"
+            },
+            "microsecond": 0,
+            "min": {
+              "day": "1",
+              "fold": "0",
+              "hour": "0",
+              "max": "9999-12-31 23:59:59.999999",
+              "microsecond": "0",
+              "min": "0001-01-01 00:00:00",
+              "minute": "0",
+              "month": "1",
+              "resolution": "0:00:00.000001",
+              "second": "0",
+              "tzinfo": "None",
+              "year": "1"
+            },
+            "minute": 0,
+            "month": 1,
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "second": 0,
+            "tzinfo": null,
+            "year": 1
+          },
+          "minute": 0,
+          "month": 1,
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "second": 0,
+          "tzinfo": null,
+          "year": 1
+        },
+        "minute": 0,
+        "month": 5,
+        "resolution": {
+          "days": 0,
+          "max": {
+            "days": 999999999,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 999999,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 86399
+          },
+          "microseconds": 1,
+          "min": {
+            "days": -999999999,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 0,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "resolution": {
+            "days": 0,
+            "max": {
+              "days": "999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "999999",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "86399"
+            },
+            "microseconds": 1,
+            "min": {
+              "days": "-999999999",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "0",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "resolution": {
+              "days": "0",
+              "max": "999999999 days, 23:59:59.999999",
+              "microseconds": "1",
+              "min": "-999999999 days, 0:00:00",
+              "resolution": "0:00:00.000001",
+              "seconds": "0"
+            },
+            "seconds": 0
+          },
+          "seconds": 0
+        },
+        "second": 0,
+        "tzinfo": null,
+        "year": 2026
+      },
+      "date_rencontre_timestamp": 1780164000000,
+      "date_saisie_resultat_timestamp": 1780169242000,
+      "date_timestamp": 1780092000000,
+      "geo": {
+        "lat": 50.40638,
+        "lng": 2.84394
+      },
+      "gs_id": null,
+      "handicap1": null,
+      "handicap2": null,
+      "horaire": null,
+      "id": "200000014545826",
+      "id_engagement_equipe1": {
+        "id": "200000005324853",
+        "logo": null,
+        "nom_usuel": ""
+      },
+      "id_engagement_equipe2": {
+        "id": "200000005324854",
+        "logo": null,
+        "nom_usuel": ""
+      },
+      "id_organisme_equipe1": {
+        "code": "HDF0062039",
+        "id": "10425",
+        "logo": null,
+        "nom": "CLUB SPORTIF AVIONNAIS",
+        "nom_club_pro": "",
+        "nom_simple": null
+      },
+      "id_organisme_equipe2": {
+        "code": "HDF0062013",
+        "id": "10400",
+        "logo": null,
+        "nom": "BASKET CLUB ARDRES",
+        "nom_club_pro": "",
+        "nom_simple": null
+      },
+      "id_poule": {
+        "id": "200000003052058",
+        "nom": "Poule A"
+      },
+      "joue": true,
+      "logo": null,
+      "lower_gs_id": null,
+      "lower_id": "200000014545826",
+      "lower_nom_equipe1": "club sportif avionnais",
+      "lower_nom_equipe2": "basket club ardres",
+      "lower_officiels": [
+        "szczepaniak florian",
+        "carlier ethan"
+      ],
+      "modification_timestamp": 1780315149000,
+      "niveau": {
+        "name": "DÉPARTEMENTAL",
+        "value": "Départemental"
+      },
+      "niveau_nb": 4,
+      "nom_equipe1": "CLUB SPORTIF AVIONNAIS",
+      "nom_equipe2": "BASKET CLUB ARDRES",
+      "nom_extended": null,
+      "numero_journee": 50,
+      "officiels": [
+        {
+          "ordre": 1,
+          "fonction": {
+            "libelle": "Arbitre"
+          },
+          "officiel": {
+            "nom": "SZCZEPANIAK",
+            "prenom": "Florian"
+          }
+        },
+        {
+          "ordre": 2,
+          "fonction": {
+            "libelle": "Arbitre"
+          },
+          "officiel": {
+            "nom": "CARLIER",
+            "prenom": "Ethan"
+          }
+        }
+      ],
+      "officiels_string": "SZCZEPANIAK Florian, CARLIER Ethan",
+      "organisateur": {
+        "adresse": null,
+        "adresse_club_pro": null,
+        "cartographie": null,
+        "code": "0062",
+        "commune": null,
+        "commune_club_pro": null,
+        "competitions": null,
+        "date_affiliation": null,
+        "date_created": null,
+        "date_updated": null,
+        "engagements": null,
+        "entreprise": null,
+        "handibasket": null,
+        "hors_association": null,
+        "id": "2087",
+        "labellisation": null,
+        "logo": null,
+        "logo_base64": null,
+        "mail": null,
+        "membres": null,
+        "nom": "COMITE DU PAS-DE-CALAIS  DE BASKET-BALL",
+        "nom_club_pro": null,
+        "nom_simple": null,
+        "offres_pratiques": null,
+        "omnisport": null,
+        "organisme_id_pere": {
+          "adresse": null,
+          "adresse_club_pro": null,
+          "cartographie": null,
+          "code": "HDF",
+          "commune": null,
+          "commune_club_pro": null,
+          "date_affiliation": null,
+          "date_created": null,
+          "date_updated": null,
+          "engagements": null,
+          "entreprise": null,
+          "handibasket": null,
+          "hors_association": null,
+          "id": null,
+          "labellisation": null,
+          "logo": null,
+          "mail": null,
+          "nom": null,
+          "nom_club_pro": null,
+          "nom_simple": null,
+          "offres_pratiques": null,
+          "omnisport": null,
+          "organisme_id_pere": null,
+          "saison_en_cours": null,
+          "salle": null,
+          "telephone": null,
+          "type": null,
+          "type_association": null,
+          "url_site_web": null
+        },
+        "organismes_fils": null,
+        "saison_en_cours": null,
+        "salle": null,
+        "telephone": null,
+        "type": "C",
+        "type_association": null,
+        "url_site_web": null
+      },
+      "pratique": {
+        "name": "THE_5_X5",
+        "value": "5x5"
+      },
+      "pro": null,
+      "resultat_equipe1": "77",
+      "resultat_equipe2": "44",
+      "saison": {
+        "code": "25-26"
+      },
+      "salle": {
+        "adresse": "Rue Arthur Lamendin",
+        "adresse_complement": "BP 59",
+        "cartographie": {
+          "adresse": null,
+          "cartographie_id": null,
+          "code_postal": "62210",
+          "coordonnees": {
+            "coordinates": [
+              "2.84394",
+              "50.40638"
+            ],
+            "type": "Point"
+          },
+          "date_created": null,
+          "date_updated": null,
+          "latitude": null,
+          "longitude": null,
+          "status": null,
+          "title": null,
+          "ville": "Avion"
+        },
+        "commune": null,
+        "id": "62001000136",
+        "libelle": "SALLE MARCEL JORION",
+        "libelle2": null,
+        "lower_adresse": "rue arthur lamendin",
+        "lower_adresse_complement": "bp 59",
+        "lower_libelle": "salle marcel jorion",
+        "numero": null
+      },
+      "sexe": null,
+      "thumbnail": null,
+      "type_competition_generique": null,
+      "unique_key": "200000003052058_50_50",
+      "url_competition": "/ligues/hdf/comites/0062/competitions/df2/match/200000014545826"
+    }
+  ],
   "prochain_match": null,
   "dernier_resultat": null,
   "lives": [],
   "stats": {
-    "total": 0,
+    "total": 2,
     "joues": 0,
     "a_venir": 0
   }
