@@ -1,6 +1,6 @@
 """
 fetch_ffbb.py - Fetch EASJB data from FFBB API
-Generates public/data.json for the static website.
+Debug version - dumps raw API response structure
 """
 
 import json
@@ -12,60 +12,52 @@ OUTPUT_PATH = Path(__file__).parent / "public" / "data.json"
 CLUB_SEARCH = "arthes saint juery"
 
 
-def safe_get(obj, *keys, default=None):
-    for key in keys:
-        if obj is None:
-            return default
-        if isinstance(obj, dict):
-            obj = obj.get(key)
-        else:
-            obj = getattr(obj, key, None)
-    return obj if obj is not None else default
+def obj_to_dict(obj, depth=0):
+    """Recursively convert any object to a JSON-serializable dict."""
+    if depth > 5:
+        return str(obj)
+    if obj is None:
+        return None
+    if isinstance(obj, (str, int, float, bool)):
+        return obj
+    if isinstance(obj, list):
+        return [obj_to_dict(i, depth+1) for i in obj]
+    if isinstance(obj, dict):
+        return {k: obj_to_dict(v, depth+1) for k, v in obj.items()}
+    # It's a custom object - get all its attributes
+    result = {}
+    for attr in dir(obj):
+        if attr.startswith('_'):
+            continue
+        try:
+            val = getattr(obj, attr)
+            if callable(val):
+                continue
+            result[attr] = obj_to_dict(val, depth+1)
+        except Exception:
+            pass
+    return result
 
 
-def extract_hits(result):
-    """Extract list of hits from any FFBB search result object."""
-    if result is None:
+def extract_list(obj):
+    """Try every possible way to get a list from a result object."""
+    if obj is None:
         return []
-    if isinstance(result, list):
-        return result
-    # Try common attribute names used by ffbb-api-client-v2
+    if isinstance(obj, list):
+        return obj
     for attr in ["hits", "results", "items", "data", "organismes",
-                 "rencontres", "competitions", "lives"]:
-        val = getattr(result, attr, None)
+                 "rencontres", "competitions", "lives", "value"]:
+        val = getattr(obj, attr, None)
         if val is not None:
             if isinstance(val, list):
                 return val
-            # Nested result object
             inner = getattr(val, "hits", None)
-            if inner is not None:
+            if inner and isinstance(inner, list):
                 return inner
-    # Last resort: try iterating
     try:
-        return list(result)
+        return list(obj)
     except Exception:
         return []
-
-
-def is_easjb(name):
-    if not name:
-        return False
-    n = str(name).lower()
-    return any(k in n for k in ["arth", "juery", "easjb"])
-
-
-def serialize_match(r):
-    return {
-        "id":          str(safe_get(r, "id", default="")),
-        "date":        str(safe_get(r, "date_reception", default=safe_get(r, "date", default="")) or ""),
-        "competition": str(safe_get(r, "competition", "nom", default=safe_get(r, "competition", default="")) or ""),
-        "equipe_dom":  str(safe_get(r, "equipe_dom", "nom", default=safe_get(r, "equipe_dom", default="")) or ""),
-        "equipe_ext":  str(safe_get(r, "equipe_ext", "nom", default=safe_get(r, "equipe_ext", default="")) or ""),
-        "score_dom":   safe_get(r, "score_dom", default=None),
-        "score_ext":   safe_get(r, "score_ext", default=None),
-        "salle":       str(safe_get(r, "salle", "nom", default=safe_get(r, "salle", default="")) or ""),
-        "statut":      str(safe_get(r, "statut", default="") or ""),
-    }
 
 
 def main():
@@ -77,7 +69,7 @@ def main():
         print("ffbb-api-client-v2 not installed.")
         sys.exit(1)
 
-    print("Resolving FFBB tokens...")
+    print("Resolving tokens...")
     try:
         tokens = TokenManager.get_tokens()
         client = FFBBAPIClientV2.create(
@@ -86,80 +78,78 @@ def main():
         )
         print("Client ready.")
     except Exception as e:
-        print(f"Error creating client: {e}")
+        print(f"Error: {e}")
         sys.exit(1)
 
-    print(f"Searching club: {CLUB_SEARCH}")
+    # --- Search organismes and dump raw structure ---
+    print(f"Searching: {CLUB_SEARCH}")
     try:
         result = client.search_organismes(CLUB_SEARCH)
-        organismes = extract_hits(result)
-        print(f"Found {len(organismes)} organismes.")
+        print(f"Result type: {type(result)}")
+        print(f"Result attrs: {[a for a in dir(result) if not a.startswith('_')]}")
+
+        hits = extract_list(result)
+        print(f"Hits count: {len(hits)}")
+
+        if hits:
+            first = hits[0]
+            print(f"First hit type: {type(first)}")
+            print(f"First hit attrs: {[a for a in dir(first) if not a.startswith('_')]}")
+            first_dict = obj_to_dict(first)
+            print(f"First hit data: {json.dumps(first_dict, default=str)[:500]}")
     except Exception as e:
-        print(f"Error searching organismes: {e}")
-        sys.exit(1)
+        print(f"Error organismes: {e}")
+        hits = []
 
-    club = None
-    for org in organismes:
-        nom = str(safe_get(org, "nom", default="")).lower()
-        if "arth" in nom and "juery" in nom:
-            club = org
-            break
-    if club is None and organismes:
-        club = organismes[0]
-
-    club_nom = str(safe_get(club, "nom", default="EASJB")) if club else "EASJB"
-    club_id  = str(safe_get(club, "id", default="")) if club else ""
-    print(f"Club: {club_nom} (id={club_id})")
-
-    print("Fetching matches...")
-    rencontres = []
+    # --- Search rencontres and dump raw structure ---
+    print("Fetching rencontres...")
+    rencontres_raw = []
     try:
-        result = client.search_rencontres(CLUB_SEARCH)
-        raw = extract_hits(result)
-        print(f"Found {len(raw)} matches.")
-        for r in raw:
-            try:
-                rencontres.append(serialize_match(r))
-            except Exception as e:
-                print(f"Skipping match: {e}")
-    except Exception as e:
-        print(f"Warning - matches error: {e}")
+        result2 = client.search_rencontres(CLUB_SEARCH)
+        print(f"Rencontres result type: {type(result2)}")
+        print(f"Rencontres result attrs: {[a for a in dir(result2) if not a.startswith('_')]}")
 
-    rencontres.sort(key=lambda x: x.get("date") or "")
-    played   = [r for r in rencontres if r.get("score_dom") is not None]
-    upcoming = [r for r in rencontres if r.get("score_dom") is None]
+        rencontres_raw = extract_list(result2)
+        print(f"Rencontres count: {len(rencontres_raw)}")
 
-    lives = []
-    try:
-        result = client.get_lives()
-        lives_raw = extract_hits(result)
-        for lv in lives_raw:
-            nom = str(safe_get(lv, "nom", default="")).lower()
-            if is_easjb(nom):
-                lives.append({
-                    "id":   str(safe_get(lv, "id", default="")),
-                    "nom":  str(safe_get(lv, "nom", default="")),
-                    "lien": str(safe_get(lv, "lien", default="")),
-                })
-        print(f"Lives: {len(lives)}")
+        if rencontres_raw:
+            first_r = rencontres_raw[0]
+            print(f"First rencontre type: {type(first_r)}")
+            first_r_dict = obj_to_dict(first_r)
+            print(f"First rencontre data: {json.dumps(first_r_dict, default=str)[:1000]}")
     except Exception as e:
-        print(f"Warning - lives error: {e}")
+        print(f"Error rencontres: {e}")
+
+    # --- Build output with raw data for inspection ---
+    rencontres_out = []
+    for r in rencontres_raw:
+        try:
+            rencontres_out.append(obj_to_dict(r))
+        except Exception:
+            pass
+
+    club_nom = "EASJB"
+    club_id = ""
+    if hits:
+        d = obj_to_dict(hits[0])
+        club_nom = str(d.get("nom") or d.get("name") or "EASJB")
+        club_id  = str(d.get("id") or d.get("_id") or d.get("code") or "")
 
     data = {
         "meta": {
             "generated_at": datetime.now(timezone.utc).isoformat(),
-            "club_nom":     club_nom,
-            "club_id":      club_id,
-            "source":       "ffbb-api-client-v2",
+            "club_nom": club_nom,
+            "club_id": club_id,
+            "source": "ffbb-api-client-v2",
         },
-        "rencontres":       rencontres,
-        "prochain_match":   upcoming[0] if upcoming else None,
-        "dernier_resultat": played[-1]  if played   else None,
-        "lives":            lives,
+        "rencontres": rencontres_out,
+        "prochain_match": None,
+        "dernier_resultat": None,
+        "lives": [],
         "stats": {
-            "total":   len(rencontres),
-            "joues":   len(played),
-            "a_venir": len(upcoming),
+            "total": len(rencontres_out),
+            "joues": 0,
+            "a_venir": 0,
         },
     }
 
@@ -167,8 +157,8 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2, default=str)
 
-    print(f"Written: {OUTPUT_PATH}")
-    print(f"Done - {len(rencontres)} matches, {len(lives)} lives.")
+    print(f"Written {len(rencontres_out)} rencontres to {OUTPUT_PATH}")
+    print("Done.")
 
 
 if __name__ == "__main__":
