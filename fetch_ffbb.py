@@ -167,7 +167,8 @@ def main():
                 d = obj_to_dict(h)
                 r = serialize_rencontre(d)
                 # Only keep matches involving EASJB
-                if is_easjb(r["equipe_dom"]) or is_easjb(r["equipe_ext"]):
+                print(f"  Match: {r['equipe_dom']} vs {r['equipe_ext']}")
+                rencontres.append(r)
                     rencontres.append(r)
             except Exception as e:
                 print(f"Skip rencontre: {e}")
