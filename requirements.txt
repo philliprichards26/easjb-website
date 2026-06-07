@@ -1,1 +1,0 @@
-ffbb-api-client-v2>=1.4.0
