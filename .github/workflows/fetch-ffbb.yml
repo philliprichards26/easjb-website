@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '15 * * * *'
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   fetch:
@@ -21,6 +18,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: pip
 
       - name: Install dependencies
         run: pip install ffbb-api-client-v2
@@ -32,5 +30,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
           git add public/data.json
-          git diff --staged --quiet || git commit -m "Update FFBB data" && git push
+          git diff --staged --quiet || (git commit -m "Update FFBB data" && git push)
