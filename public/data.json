@@ -1,17 +1,77 @@
 {
   "meta": {
-    "generated_at": "2026-09-13T21:25:13.096341+00:00",
+    "generated_at": "2026-09-14T00:09:34.431347+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
   },
-  "rencontres": [],
-  "prochain_match": null,
+  "rencontres": [
+    {
+      "id": "200000014731662",
+      "date": "2026-09-19T15:00:00",
+      "competition": "Départementale féminine U13 - Division 2",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "MOURENX BASKET BASSIN DE LACQ - 1",
+      "score_dom": null,
+      "score_ext": null,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": false,
+      "is_home": false
+    },
+    {
+      "id": "200000014732789",
+      "date": "2026-09-19T15:00:00",
+      "competition": "Départementale féminine U15 - Division 2",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "IE - CTC LES CO'BEARNAIS - US SAULT DE NAVAILLES - 2",
+      "score_dom": null,
+      "score_ext": null,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": false,
+      "is_home": false
+    },
+    {
+      "id": "200000014736431",
+      "date": "2026-09-19T15:00:00",
+      "competition": "Départementale féminine U11 - Division 3",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "MOURENX BASKET BASSIN DE LACQ - 1",
+      "score_dom": null,
+      "score_ext": null,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": false,
+      "is_home": false
+    },
+    {
+      "id": "200000014733126",
+      "date": "2026-09-20T13:00:00",
+      "competition": "Départementale féminine U18 - Division 2",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "GAZTIAK GOTEIN",
+      "score_dom": null,
+      "score_ext": null,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": false,
+      "is_home": false
+    }
+  ],
+  "prochain_match": {
+    "id": "200000014731662",
+    "date": "2026-09-19T15:00:00",
+    "competition": "Départementale féminine U13 - Division 2",
+    "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+    "equipe_ext": "MOURENX BASKET BASSIN DE LACQ - 1",
+    "score_dom": null,
+    "score_ext": null,
+    "salle": "SALLE DES SPORTS ARTHEZ",
+    "joue": false,
+    "is_home": false
+  },
   "dernier_resultat": null,
   "lives": [],
   "stats": {
-    "total": 0,
+    "total": 4,
     "joues": 0,
-    "a_venir": 0
+    "a_venir": 4
   }
 }
