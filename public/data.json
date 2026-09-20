@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-20T11:26:16.766755+00:00",
+    "generated_at": "2026-09-20T16:02:50.056736+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
@@ -24,10 +24,10 @@
       "competition": "Départementale féminine U13 - Division 2",
       "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
       "equipe_ext": "MOURENX BASKET BASSIN DE LACQ - 1",
-      "score_dom": null,
-      "score_ext": null,
+      "score_dom": 41,
+      "score_ext": 24,
       "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": false,
+      "joue": true,
       "is_home": false
     },
     {
@@ -36,10 +36,10 @@
       "competition": "Départementale féminine U15 - Division 2",
       "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
       "equipe_ext": "IE - CTC LES CO'BEARNAIS - US SAULT DE NAVAILLES - 2",
-      "score_dom": null,
-      "score_ext": null,
+      "score_dom": 61,
+      "score_ext": 54,
       "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": false,
+      "joue": true,
       "is_home": false
     },
     {
@@ -89,14 +89,26 @@
       "salle": "SALLE DES SPORTS ARTHEZ",
       "joue": false,
       "is_home": false
+    },
+    {
+      "id": "200000014733134",
+      "date": "2026-09-27T13:00:00",
+      "competition": "Départementale féminine U18 - Division 2",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "SAUVETERRE BASKET CLUB",
+      "score_dom": null,
+      "score_ext": null,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": false,
+      "is_home": false
     }
   ],
   "prochain_match": {
-    "id": "200000014731662",
-    "date": "2026-09-19T14:00:00",
+    "id": "200000014731676",
+    "date": "2026-09-26T15:00:00",
     "competition": "Départementale féminine U13 - Division 2",
     "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-    "equipe_ext": "MOURENX BASKET BASSIN DE LACQ - 1",
+    "equipe_ext": "LESCAR Basket",
     "score_dom": null,
     "score_ext": null,
     "salle": "SALLE DES SPORTS ARTHEZ",
@@ -117,8 +129,8 @@
   },
   "lives": [],
   "stats": {
-    "total": 7,
-    "joues": 2,
-    "a_venir": 5
+    "total": 8,
+    "joues": 4,
+    "a_venir": 4
   }
 }
