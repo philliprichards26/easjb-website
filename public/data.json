@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-20T21:31:07.478383+00:00",
+    "generated_at": "2026-09-21T00:14:44.235857+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
@@ -89,18 +89,6 @@
       "salle": "SALLE DES SPORTS ARTHEZ",
       "joue": false,
       "is_home": false
-    },
-    {
-      "id": "200000014733134",
-      "date": "2026-09-27T13:00:00",
-      "competition": "Départementale féminine U18 - Division 2",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "SAUVETERRE BASKET CLUB",
-      "score_dom": null,
-      "score_ext": null,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": false,
-      "is_home": false
     }
   ],
   "prochain_match": {
@@ -129,8 +117,8 @@
   },
   "lives": [],
   "stats": {
-    "total": 8,
+    "total": 7,
     "joues": 4,
-    "a_venir": 4
+    "a_venir": 3
   }
 }
