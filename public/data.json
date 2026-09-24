@@ -1,124 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-09-24T04:46:13.792123+00:00",
+    "generated_at": "2026-09-24T09:58:31.017549+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
   },
-  "rencontres": [
-    {
-      "id": "200000014736431",
-      "date": "2026-09-19T12:30:00",
-      "competition": "Départementale féminine U11 - Division 3",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "MOURENX BASKET BASSIN DE LACQ - 1",
-      "score_dom": 26,
-      "score_ext": 24,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": true,
-      "is_home": false
-    },
-    {
-      "id": "200000014731662",
-      "date": "2026-09-19T14:00:00",
-      "competition": "Départementale féminine U13 - Division 2",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "MOURENX BASKET BASSIN DE LACQ - 1",
-      "score_dom": 41,
-      "score_ext": 24,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": true,
-      "is_home": false
-    },
-    {
-      "id": "200000014732789",
-      "date": "2026-09-19T16:00:00",
-      "competition": "Départementale féminine U15 - Division 2",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "IE - CTC LES CO'BEARNAIS - US SAULT DE NAVAILLES - 2",
-      "score_dom": 61,
-      "score_ext": 54,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": true,
-      "is_home": false
-    },
-    {
-      "id": "200000014733126",
-      "date": "2026-09-20T13:00:00",
-      "competition": "Départementale féminine U18 - Division 2",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "GAZTIAK GOTEIN",
-      "score_dom": 44,
-      "score_ext": 38,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": true,
-      "is_home": false
-    },
-    {
-      "id": "200000014731676",
-      "date": "2026-09-26T15:00:00",
-      "competition": "Départementale féminine U13 - Division 2",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "LESCAR Basket",
-      "score_dom": null,
-      "score_ext": null,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": false,
-      "is_home": false
-    },
-    {
-      "id": "200000014732800",
-      "date": "2026-09-26T15:00:00",
-      "competition": "Départementale féminine U15 - Division 2",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "SAUVETERRE BASKET CLUB",
-      "score_dom": null,
-      "score_ext": null,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": false,
-      "is_home": false
-    },
-    {
-      "id": "200000014736439",
-      "date": "2026-09-26T15:00:00",
-      "competition": "Départementale féminine U11 - Division 3",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "MALAUSSANNE MAZEROLLES BASKET SOUBESTRE",
-      "score_dom": null,
-      "score_ext": null,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": false,
-      "is_home": false
-    }
-  ],
-  "prochain_match": {
-    "id": "200000014731676",
-    "date": "2026-09-26T15:00:00",
-    "competition": "Départementale féminine U13 - Division 2",
-    "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-    "equipe_ext": "LESCAR Basket",
-    "score_dom": null,
-    "score_ext": null,
-    "salle": "SALLE DES SPORTS ARTHEZ",
-    "joue": false,
-    "is_home": false
-  },
-  "dernier_resultat": {
-    "id": "200000014733126",
-    "date": "2026-09-20T13:00:00",
-    "competition": "Départementale féminine U18 - Division 2",
-    "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-    "equipe_ext": "GAZTIAK GOTEIN",
-    "score_dom": 44,
-    "score_ext": 38,
-    "salle": "SALLE DES SPORTS ARTHEZ",
-    "joue": true,
-    "is_home": false
-  },
+  "rencontres": [],
+  "prochain_match": null,
+  "dernier_resultat": null,
   "lives": [],
   "stats": {
-    "total": 7,
-    "joues": 4,
-    "a_venir": 3
+    "total": 0,
+    "joues": 0,
+    "a_venir": 0
   }
 }
