@@ -1,17 +1,77 @@
 {
   "meta": {
-    "generated_at": "2026-09-24T19:07:40.352728+00:00",
+    "generated_at": "2026-09-24T22:22:05.166703+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
   },
-  "rencontres": [],
+  "rencontres": [
+    {
+      "id": "200000014736431",
+      "date": "2026-09-19T12:30:00",
+      "competition": "Départementale féminine U11 - Division 3",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "MOURENX BASKET BASSIN DE LACQ - 1",
+      "score_dom": 26,
+      "score_ext": 24,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": true,
+      "is_home": false
+    },
+    {
+      "id": "200000014731662",
+      "date": "2026-09-19T14:00:00",
+      "competition": "Départementale féminine U13 - Division 2",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "MOURENX BASKET BASSIN DE LACQ - 1",
+      "score_dom": 41,
+      "score_ext": 24,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": true,
+      "is_home": false
+    },
+    {
+      "id": "200000014732789",
+      "date": "2026-09-19T16:00:00",
+      "competition": "Départementale féminine U15 - Division 2",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "IE - CTC LES CO'BEARNAIS - US SAULT DE NAVAILLES - 2",
+      "score_dom": 61,
+      "score_ext": 54,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": true,
+      "is_home": false
+    },
+    {
+      "id": "200000014733126",
+      "date": "2026-09-20T13:00:00",
+      "competition": "Départementale féminine U18 - Division 2",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "GAZTIAK GOTEIN",
+      "score_dom": 44,
+      "score_ext": 38,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": true,
+      "is_home": false
+    }
+  ],
   "prochain_match": null,
-  "dernier_resultat": null,
+  "dernier_resultat": {
+    "id": "200000014733126",
+    "date": "2026-09-20T13:00:00",
+    "competition": "Départementale féminine U18 - Division 2",
+    "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+    "equipe_ext": "GAZTIAK GOTEIN",
+    "score_dom": 44,
+    "score_ext": 38,
+    "salle": "SALLE DES SPORTS ARTHEZ",
+    "joue": true,
+    "is_home": false
+  },
   "lives": [],
   "stats": {
-    "total": 0,
-    "joues": 0,
+    "total": 4,
+    "joues": 4,
     "a_venir": 0
   }
 }
