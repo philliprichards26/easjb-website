@@ -1,41 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T15:24:44.936419+00:00",
+    "generated_at": "2026-09-28T21:58:35.837223+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
   },
-  "rencontres": [
-    {
-      "id": "200000014733126",
-      "date": "2026-09-20T13:00:00",
-      "competition": "Départementale féminine U18 - Division 2",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "GAZTIAK GOTEIN",
-      "score_dom": 44,
-      "score_ext": 38,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": true,
-      "is_home": false
-    }
-  ],
+  "rencontres": [],
   "prochain_match": null,
-  "dernier_resultat": {
-    "id": "200000014733126",
-    "date": "2026-09-20T13:00:00",
-    "competition": "Départementale féminine U18 - Division 2",
-    "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-    "equipe_ext": "GAZTIAK GOTEIN",
-    "score_dom": 44,
-    "score_ext": 38,
-    "salle": "SALLE DES SPORTS ARTHEZ",
-    "joue": true,
-    "is_home": false
-  },
+  "dernier_resultat": null,
   "lives": [],
   "stats": {
-    "total": 1,
-    "joues": 1,
+    "total": 0,
+    "joues": 0,
     "a_venir": 0
   }
 }
