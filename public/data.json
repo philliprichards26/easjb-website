@@ -1,17 +1,41 @@
 {
   "meta": {
-    "generated_at": "2026-10-25T19:03:41.546753+00:00",
+    "generated_at": "2026-10-25T21:45:09.806396+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
   },
-  "rencontres": [],
-  "prochain_match": null,
+  "rencontres": [
+    {
+      "id": "200000014741751",
+      "date": "2026-11-01T15:30:00",
+      "competition": "Coupe de Loire-Atlantique Séniors Féminines",
+      "equipe_dom": "ETOILE ARTHONNAISE",
+      "equipe_ext": "EN - US Pont St Martin / EB Sorinières",
+      "score_dom": null,
+      "score_ext": null,
+      "salle": "SALLE AJONCS - COMPLEXE SPORTIF",
+      "joue": false,
+      "is_home": false
+    }
+  ],
+  "prochain_match": {
+    "id": "200000014741751",
+    "date": "2026-11-01T15:30:00",
+    "competition": "Coupe de Loire-Atlantique Séniors Féminines",
+    "equipe_dom": "ETOILE ARTHONNAISE",
+    "equipe_ext": "EN - US Pont St Martin / EB Sorinières",
+    "score_dom": null,
+    "score_ext": null,
+    "salle": "SALLE AJONCS - COMPLEXE SPORTIF",
+    "joue": false,
+    "is_home": false
+  },
   "dernier_resultat": null,
   "lives": [],
   "stats": {
-    "total": 0,
+    "total": 1,
     "joues": 0,
-    "a_venir": 0
+    "a_venir": 1
   }
 }
