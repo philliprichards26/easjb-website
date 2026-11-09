@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-06T14:59:35.592797+00:00",
+    "generated_at": "2026-11-09T18:44:36.241937+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
@@ -19,11 +19,35 @@
       "is_home": false
     },
     {
+      "id": "200000014923974",
+      "date": "2026-11-07T14:00:00",
+      "competition": "Départementale féminine U13",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "IE - CTC COEUR DE BEARN - FR MONEIN - 1",
+      "score_dom": 34,
+      "score_ext": 54,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": true,
+      "is_home": false
+    },
+    {
       "id": "200000014923945",
-      "date": "2026-11-07T15:00:00",
+      "date": "2026-11-07T16:00:00",
       "competition": "Départementale féminine U15 - Division 2",
       "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
       "equipe_ext": "HASPARREN BASKET CLUB ZAREAN - 2",
+      "score_dom": 55,
+      "score_ext": 37,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": true,
+      "is_home": false
+    },
+    {
+      "id": "200000014923982",
+      "date": "2026-11-14T15:00:00",
+      "competition": "Départementale féminine U13",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "SA BIDOS BASKET FEMININ - 1",
       "score_dom": null,
       "score_ext": null,
       "salle": "SALLE DES SPORTS ARTHEZ",
@@ -31,11 +55,11 @@
       "is_home": false
     },
     {
-      "id": "200000014923974",
-      "date": "2026-11-07T15:00:00",
-      "competition": "Départementale féminine U13",
+      "id": "200000014924306",
+      "date": "2026-11-14T15:00:00",
+      "competition": "Départementale féminine U11 - Division 2",
       "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "IE - CTC COEUR DE BEARN - FR MONEIN - 1",
+      "equipe_ext": "ANGLET COTE BASQUE BASKET - 2",
       "score_dom": null,
       "score_ext": null,
       "salle": "SALLE DES SPORTS ARTHEZ",
@@ -44,11 +68,11 @@
     }
   ],
   "prochain_match": {
-    "id": "200000014923945",
-    "date": "2026-11-07T15:00:00",
-    "competition": "Départementale féminine U15 - Division 2",
+    "id": "200000014923982",
+    "date": "2026-11-14T15:00:00",
+    "competition": "Départementale féminine U13",
     "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-    "equipe_ext": "HASPARREN BASKET CLUB ZAREAN - 2",
+    "equipe_ext": "SA BIDOS BASKET FEMININ - 1",
     "score_dom": null,
     "score_ext": null,
     "salle": "SALLE DES SPORTS ARTHEZ",
@@ -56,21 +80,21 @@
     "is_home": false
   },
   "dernier_resultat": {
-    "id": "200000014741751",
-    "date": "2026-11-01T15:30:00",
-    "competition": "Coupe de Loire-Atlantique Séniors Féminines",
-    "equipe_dom": "ETOILE ARTHONNAISE",
-    "equipe_ext": "EN - US Pont St Martin / EB Sorinières",
-    "score_dom": 23,
-    "score_ext": 110,
-    "salle": "SALLE AJONCS - COMPLEXE SPORTIF",
+    "id": "200000014923945",
+    "date": "2026-11-07T16:00:00",
+    "competition": "Départementale féminine U15 - Division 2",
+    "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+    "equipe_ext": "HASPARREN BASKET CLUB ZAREAN - 2",
+    "score_dom": 55,
+    "score_ext": 37,
+    "salle": "SALLE DES SPORTS ARTHEZ",
     "joue": true,
     "is_home": false
   },
   "lives": [],
   "stats": {
-    "total": 3,
-    "joues": 1,
+    "total": 5,
+    "joues": 3,
     "a_venir": 2
   }
 }
