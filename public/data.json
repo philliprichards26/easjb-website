@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-14T21:27:10.806267+00:00",
+    "generated_at": "2026-11-15T01:52:13.177082+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
@@ -29,9 +29,32 @@
       "salle": "SALLE DES SPORTS ARTHEZ",
       "joue": true,
       "is_home": false
+    },
+    {
+      "id": "200000014579587",
+      "date": "2026-11-21T20:30:00",
+      "competition": "Départementale féminine seniors - Division 2",
+      "equipe_dom": "ETOILE ARTHONNAISE",
+      "equipe_ext": "UNION DU SILLON BASKET CLUB - 1",
+      "score_dom": null,
+      "score_ext": null,
+      "salle": "SALLE AJONCS - COMPLEXE SPORTIF",
+      "joue": false,
+      "is_home": false
     }
   ],
-  "prochain_match": null,
+  "prochain_match": {
+    "id": "200000014579587",
+    "date": "2026-11-21T20:30:00",
+    "competition": "Départementale féminine seniors - Division 2",
+    "equipe_dom": "ETOILE ARTHONNAISE",
+    "equipe_ext": "UNION DU SILLON BASKET CLUB - 1",
+    "score_dom": null,
+    "score_ext": null,
+    "salle": "SALLE AJONCS - COMPLEXE SPORTIF",
+    "joue": false,
+    "is_home": false
+  },
   "dernier_resultat": {
     "id": "200000014923945",
     "date": "2026-11-07T16:00:00",
@@ -46,8 +69,8 @@
   },
   "lives": [],
   "stats": {
-    "total": 2,
+    "total": 3,
     "joues": 2,
-    "a_venir": 0
+    "a_venir": 1
   }
 }
