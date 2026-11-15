@@ -1,23 +1,11 @@
 {
   "meta": {
-    "generated_at": "2026-11-15T09:19:16.202184+00:00",
+    "generated_at": "2026-11-15T17:05:05.931533+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
   },
   "rencontres": [
-    {
-      "id": "200000014923974",
-      "date": "2026-11-07T14:00:00",
-      "competition": "Départementale féminine U13",
-      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
-      "equipe_ext": "IE - CTC COEUR DE BEARN - FR MONEIN - 1",
-      "score_dom": 34,
-      "score_ext": 54,
-      "salle": "SALLE DES SPORTS ARTHEZ",
-      "joue": true,
-      "is_home": false
-    },
     {
       "id": "200000014923945",
       "date": "2026-11-07T16:00:00",
@@ -69,8 +57,8 @@
   },
   "lives": [],
   "stats": {
-    "total": 3,
-    "joues": 2,
+    "total": 2,
+    "joues": 1,
     "a_venir": 1
   }
 }
