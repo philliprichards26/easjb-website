@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-21T09:44:44.414168+00:00",
+    "generated_at": "2026-11-21T17:28:02.808470+00:00",
     "club_nom": "ENT. ARTHES ST JUERY BB",
     "club_id": "12493",
     "source": "ffbb-api-client-v2"
@@ -15,6 +15,30 @@
       "score_dom": null,
       "score_ext": null,
       "salle": "SALLE AJONCS - COMPLEXE SPORTIF",
+      "joue": false,
+      "is_home": false
+    },
+    {
+      "id": "200000014923955",
+      "date": "2026-11-28T15:00:00",
+      "competition": "Départementale féminine U15 - Division 2",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "FR SAMES",
+      "score_dom": null,
+      "score_ext": null,
+      "salle": "SALLE DES SPORTS ARTHEZ",
+      "joue": false,
+      "is_home": false
+    },
+    {
+      "id": "200000014924314",
+      "date": "2026-11-28T15:00:00",
+      "competition": "Départementale féminine U11 - Division 2",
+      "equipe_dom": "IE - CTC BCA/USCG - BC ARTHEZIEN",
+      "equipe_ext": "EST BEARN BASKET AMI",
+      "score_dom": null,
+      "score_ext": null,
+      "salle": "SALLE DES SPORTS ARTHEZ",
       "joue": false,
       "is_home": false
     }
@@ -34,8 +58,8 @@
   "dernier_resultat": null,
   "lives": [],
   "stats": {
-    "total": 1,
+    "total": 3,
     "joues": 0,
-    "a_venir": 1
+    "a_venir": 3
   }
 }
